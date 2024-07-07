@@ -27,7 +27,15 @@
     <maven.compiler.source>21</maven.compiler.source>
     <maven.compiler.target>21</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <io.confluent.version>7.6.1</io.confluent.version>
+    <apache.avro.version>1.11.3</apache.avro.version>
     <java.faker.version>1.0.2</java.faker.version>
   </properties>
 
+  <repositories>
+    <repository>
+      <id>confluent</id>
+      <url>https://packages.confluent.io/maven/</url>
+    </repository>
+  </repositories>
 </project>
