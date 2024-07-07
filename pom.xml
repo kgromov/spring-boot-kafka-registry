@@ -27,6 +27,7 @@
     <maven.compiler.source>21</maven.compiler.source>
     <maven.compiler.target>21</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.faker.version>1.0.2</java.faker.version>
   </properties>
 
 </project>

@@ -17,7 +17,7 @@
         <dependency>
             <groupId>org.kgrmov</groupId>
             <artifactId>schema-registry</artifactId>
-            <version>${parent.version}</version>
+            <version>${project.parent.version}</version>
         </dependency>
 
         <dependency>
@@ -32,7 +32,7 @@
         <dependency>
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
-            <version>1.0.2</version>
+            <version>${java.faker.version}</version>
         </dependency>
     </dependencies>
 
