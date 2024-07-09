@@ -1,0 +1,8 @@
+{
+    "type": "record",
+    "name": "OrderAcceptedEvent",
+    "namespace": "org.kgromov.schema.events",
+    "fields": [
+        { "name": "orderNumber", "type": "long" }
+    ]
+}

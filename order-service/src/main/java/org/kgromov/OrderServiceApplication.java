@@ -1,7 +1,8 @@
 package org.kgromov;
 
 import com.github.javafaker.Faker;
-import org.kgromov.schema.events.OrderPlacedEvent;
+import com.github.javafaker.Food;
+import org.kgromov.schema.events.OrderCreatedEvent;
 import org.kgromov.service.OrderService;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
@@ -18,9 +19,9 @@ public class OrderServiceApplication {
     ApplicationRunner applicationRunner(OrderService orderService) {
         return args -> {
             Faker faker = new Faker();
-            var person = faker.name();
-            String emailAddress = faker.internet().emailAddress();
-            orderService.placeOrder(new OrderPlacedEvent(faker.random().nextLong(), emailAddress, person.firstName(), person.lastName()));
+            Food food = faker.food();
+            var orderCreatedEvent = new OrderCreatedEvent(faker.random().nextLong(), food.dish(), faker.random().nextInt(0, 10));
+            orderService.createOrder(orderCreatedEvent);
         };
     }
 }
