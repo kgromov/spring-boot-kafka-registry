@@ -1,0 +1,10 @@
+{
+    "type": "record",
+    "name": "OrderCreatedEvent",
+    "namespace": "org.kgromov.schema.events",
+    "fields": [
+        { "name": "orderNumber", "type": "long" },
+        { "name": "food", "type": "string" },
+        { "name": "quantity", "type": "int" }
+    ]
+}

@@ -34,17 +34,12 @@
             <artifactId>kafka-schema-registry-client</artifactId>
             <version>${io.confluent.version}</version>
         </dependency>
-        <dependency>
-            <groupId>io.confluent</groupId>
-            <artifactId>kafka-schema-registry-client</artifactId>
-            <version>${io.confluent.version}</version>
-        </dependency>
         <!-- includes kafka-schema-registry-client -->
-        <!--  <dependency>
+          <dependency>
               <groupId>io.confluent</groupId>
               <artifactId>kafka-schema-registry</artifactId>
               <version>${io.confluent.version}</version>
-          </dependency>-->
+          </dependency>
         <dependency>
             <groupId>io.confluent</groupId>
             <artifactId>kafka-avro-serializer</artifactId>
