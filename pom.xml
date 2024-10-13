@@ -30,6 +30,7 @@
     <io.confluent.version>7.6.1</io.confluent.version>
     <apache.avro.version>1.11.3</apache.avro.version>
     <java.faker.version>1.0.2</java.faker.version>
+    <springwolf.version>1.7.0</springwolf.version>
   </properties>
 
   <repositories>

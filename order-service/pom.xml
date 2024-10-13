@@ -9,10 +9,6 @@
 
     <artifactId>order-service</artifactId>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.kgrmov</groupId>
@@ -22,11 +18,28 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
+        </dependency>
+
+        <!-- Provides the documentation API -->
+        <dependency>
+            <groupId>io.github.springwolf</groupId>
+            <artifactId>springwolf-kafka</artifactId>
+            <version>${springwolf.version}</version>
+        </dependency>
+        <!-- Provides the UI - optional (recommended) -->
+        <dependency>
+            <groupId>io.github.springwolf</groupId>
+            <artifactId>springwolf-ui</artifactId>
+            <version>${springwolf.version}</version>
         </dependency>
 
         <dependency>
@@ -39,6 +52,28 @@
               <groupId>io.confluent</groupId>
               <artifactId>kafka-schema-registry</artifactId>
               <version>${io.confluent.version}</version>
+              <exclusions>
+                  <exclusion>
+                      <groupId>ch.qos.logback</groupId>
+                      <artifactId>logback-classic</artifactId>
+                  </exclusion>
+                  <exclusion>
+                      <groupId>org.slf4j</groupId>
+                      <artifactId>slf4j-simple</artifactId>
+                  </exclusion>
+                  <exclusion>
+                      <groupId>org.slf4j</groupId>
+                      <artifactId>slf4j-api</artifactId>
+                  </exclusion>
+                  <exclusion>
+                      <groupId>ch.qos.reload4j</groupId>
+                      <artifactId>reload4j</artifactId>
+                  </exclusion>
+                  <exclusion>
+                      <groupId>org.springframework.boot</groupId>
+                      <artifactId>spring-boot-starter-logging</artifactId>
+                  </exclusion>
+              </exclusions>
           </dependency>
         <dependency>
             <groupId>io.confluent</groupId>
