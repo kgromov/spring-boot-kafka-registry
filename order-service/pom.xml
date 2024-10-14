@@ -47,34 +47,6 @@
             <artifactId>kafka-schema-registry-client</artifactId>
             <version>${io.confluent.version}</version>
         </dependency>
-        <!-- includes kafka-schema-registry-client -->
-          <dependency>
-              <groupId>io.confluent</groupId>
-              <artifactId>kafka-schema-registry</artifactId>
-              <version>${io.confluent.version}</version>
-              <exclusions>
-                  <exclusion>
-                      <groupId>ch.qos.logback</groupId>
-                      <artifactId>logback-classic</artifactId>
-                  </exclusion>
-                  <exclusion>
-                      <groupId>org.slf4j</groupId>
-                      <artifactId>slf4j-simple</artifactId>
-                  </exclusion>
-                  <exclusion>
-                      <groupId>org.slf4j</groupId>
-                      <artifactId>slf4j-api</artifactId>
-                  </exclusion>
-                  <exclusion>
-                      <groupId>ch.qos.reload4j</groupId>
-                      <artifactId>reload4j</artifactId>
-                  </exclusion>
-                  <exclusion>
-                      <groupId>org.springframework.boot</groupId>
-                      <artifactId>spring-boot-starter-logging</artifactId>
-                  </exclusion>
-              </exclusions>
-          </dependency>
         <dependency>
             <groupId>io.confluent</groupId>
             <artifactId>kafka-avro-serializer</artifactId>

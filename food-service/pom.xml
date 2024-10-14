@@ -22,11 +22,24 @@
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.kafka</groupId>
             <artifactId>spring-kafka</artifactId>
+        </dependency>
+
+        <!-- Provides the documentation API -->
+        <dependency>
+            <groupId>io.github.springwolf</groupId>
+            <artifactId>springwolf-kafka</artifactId>
+            <version>${springwolf.version}</version>
+        </dependency>
+        <!-- Provides the UI - optional (recommended) -->
+        <dependency>
+            <groupId>io.github.springwolf</groupId>
+            <artifactId>springwolf-ui</artifactId>
+            <version>${springwolf.version}</version>
         </dependency>
 
         <dependency>
@@ -34,12 +47,6 @@
             <artifactId>kafka-schema-registry-client</artifactId>
             <version>${io.confluent.version}</version>
         </dependency>
-        <!-- includes kafka-schema-registry-client -->
-      <!--  <dependency>
-            <groupId>io.confluent</groupId>
-            <artifactId>kafka-schema-registry</artifactId>
-            <version>${io.confluent.version}</version>
-        </dependency>-->
         <dependency>
             <groupId>io.confluent</groupId>
             <artifactId>kafka-avro-serializer</artifactId>
