@@ -2,7 +2,6 @@ package org.kgromov;
 
 import com.github.javafaker.Faker;
 import com.github.javafaker.Food;
-import org.kgromov.schema.events.OrderCreatedEvent;
 import org.kgromov.service.OrderService;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;

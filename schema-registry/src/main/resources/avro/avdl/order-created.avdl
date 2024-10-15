@@ -1,0 +1,8 @@
+@namespace("org.kgromov.schema.events")
+protocol OrderCreatedEvent {
+	record OrderCreatedEvent {
+		long orderNumber;
+		string food;
+		int quantity;
+	}
+}

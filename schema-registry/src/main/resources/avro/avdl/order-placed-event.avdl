@@ -1,0 +1,9 @@
+@namespace("org.kgromov.schema.events")
+protocol OrderPlacedEvent {
+	record OrderPlacedEvent {
+		long orderNumber;
+		string email;
+		string firstName;
+		string lastName;
+	}
+}

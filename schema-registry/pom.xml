@@ -20,6 +20,7 @@
 
     <build>
         <plugins>
+            <!-- generates only protocol interface - no implementation -->
             <plugin>
                 <groupId>org.apache.avro</groupId>
                 <artifactId>avro-maven-plugin</artifactId>
@@ -28,16 +29,35 @@
                     <execution>
                         <phase>generate-sources</phase>
                         <goals>
-                            <goal>schema</goal>
+                            <goal>idl-protocol</goal>
                         </goals>
                         <!-- seems needs to be on plugin level to run directly from goal - mvn avro:schema -->
                         <configuration>
-                            <sourceDirectory>${project.basedir}/src/main/resources/avro/</sourceDirectory>
+                            <sourceDirectory>${project.basedir}/src/main/resources/avro/avdl</sourceDirectory>
                             <outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
+
+            <!-- this custom plugin does not work - simply maven can't find it -->
+           <!-- <plugin>
+                <groupId>com.sb.plugins</groupId>
+                <artifactId>avdl2avsc-maven-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>genschema</goal>
+                        </goals>
+                        <configuration>
+                            <inputAvdlDirectory>${project.basedir}/src/main/resources/avro/avdl</inputAvdlDirectory>
+                            <outputSchemaDirectory>${project.basedir}/src/main/java/</outputSchemaDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -48,5 +68,16 @@
             </plugin>
         </plugins>
     </build>
+
+ <!--   <repositories>
+        <repository>
+            <id>Sameer Maven Repo</id>
+            <url>https://github.com/sameerbhadouria/mvn-repo/raw/master</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>-->
 
 </project>

@@ -1,0 +1,6 @@
+@namespace("org.kgromov.schema.events")
+protocol OrderAcceptedEvent {
+	record OrderAcceptedEvent {
+		long orderNumber;
+	}
+}
